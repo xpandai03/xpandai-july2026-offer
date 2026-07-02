@@ -24,7 +24,7 @@ export function Philosophy() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="philosophy" className="py-32 lg:py-40 px-6 lg:px-12">
+    <section ref={sectionRef} id="approach" className="py-32 lg:py-40 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Image */}
@@ -35,7 +35,7 @@ export function Philosophy() {
           >
             <img
               src="/minimalist-japanese-interior-design-with-natural-w.jpg"
-              alt="Serene minimalist interior with natural wood elements"
+              alt="A calm, uncluttered workspace"
               className="absolute inset-0 w-full h-full object-cover"
             />
             {/* Overlay accent */}
@@ -49,7 +49,7 @@ export function Philosophy() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
               }`}
             >
-              Our Philosophy
+              Our Approach
             </p>
 
             <h2
@@ -57,10 +57,10 @@ export function Philosophy() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              The art of
-              <span className="italic"> intentional</span>
+              We build on top of
+              <span className="italic"> what</span>
               <br />
-              living
+              works
             </h2>
 
             <div
@@ -69,13 +69,13 @@ export function Philosophy() {
               }`}
             >
               <p>
-                We believe that every space holds the potential for transformation. Not through addition, but through
-                careful subtraction—revealing what was always meant to be there.
+                No rip-and-replace. We connect and complete the stack you already run — the forms, the calendars, the
+                CRM — instead of asking your firm to start over.
               </p>
               <p>
-                Our approach draws from the Japanese concept of <em className="text-foreground">ma</em>—the profound
-                beauty found in emptiness—and the Scandinavian embrace of
-                <em className="text-foreground"> hygge</em>, that feeling of cozy contentment.
+                One accountable partner instead of a rotating cast of programmers. We put the right{" "}
+                <em className="text-foreground">AI</em> to work where it earns its keep, and stand behind every part of
+                the system we build for you.
               </p>
             </div>
 
@@ -86,16 +86,16 @@ export function Philosophy() {
               }`}
             >
               <div>
-                <p className="font-serif text-3xl md:text-4xl text-sage">12</p>
-                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Years</p>
+                <p className="font-serif text-3xl md:text-4xl text-sage">3–4</p>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Weeks to live</p>
               </div>
               <div>
-                <p className="font-serif text-3xl md:text-4xl text-sage">140+</p>
-                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Projects</p>
+                <p className="font-serif text-3xl md:text-4xl text-sage">20+</p>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Automations, one client</p>
               </div>
               <div>
-                <p className="font-serif text-3xl md:text-4xl text-sage">8</p>
-                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Awards</p>
+                <p className="font-serif text-3xl md:text-4xl text-sage">2</p>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Years, longest partnership</p>
               </div>
             </div>
           </div>
