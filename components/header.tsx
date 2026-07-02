@@ -12,22 +12,22 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="font-serif text-2xl tracking-wide text-foreground">
-            Stillpoint
+            Xpand AI
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
             <Link
-              href="#philosophy"
+              href="#approach"
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
-              Philosophy
+              Approach
             </Link>
             <Link
-              href="#services"
+              href="#platform"
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
-              Services
+              Platform
             </Link>
             <Link
               href="#process"
@@ -67,18 +67,18 @@ export function Header() {
         >
           <div className="flex flex-col gap-6 pt-4">
             <Link
-              href="#philosophy"
+              href="#approach"
               onClick={() => setIsMenuOpen(false)}
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
             >
-              Philosophy
+              Approach
             </Link>
             <Link
-              href="#services"
+              href="#platform"
               onClick={() => setIsMenuOpen(false)}
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
             >
-              Services
+              Platform
             </Link>
             <Link
               href="#process"
