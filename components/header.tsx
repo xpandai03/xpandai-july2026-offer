@@ -12,7 +12,7 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="font-serif text-2xl tracking-wide text-foreground">
-            Xpand AI
+            XPAND AI
           </Link>
 
           {/* Desktop Navigation */}
