@@ -21,7 +21,7 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Interior Design Studio
+          Operations Platform for Advisory Firms
         </p>
 
         {/* Main Headline */}
@@ -30,8 +30,8 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Spaces that
-          <span className="block text-sage">breathe</span>
+          All your data.
+          <span className="block text-sage">Finally at your fingertips.</span>
         </h1>
 
         {/* Subheadline */}
@@ -40,7 +40,8 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Where Japanese minimalism meets Scandinavian warmth. We craft interiors that honor both purpose and presence.
+          One branded system that runs your intake, scoring, scheduling, and CRM — so your best prospects book fast and
+          nothing leaks through the cracks.
         </p>
 
         {/* CTA */}
@@ -50,10 +51,10 @@ export function Hero() {
           }`}
         >
           <a
-            href="#contact"
+            href="#book-call"
             className="group inline-flex items-center gap-3 px-8 py-4 bg-sage text-primary-foreground text-sm tracking-widest uppercase hover:bg-sage/90 transition-all duration-500"
           >
-            Begin Your Journey
+            Book a 20-minute call
             <svg
               className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
               fill="none"
@@ -64,10 +65,10 @@ export function Hero() {
             </svg>
           </a>
           <a
-            href="#philosophy"
+            href="#platform"
             className="inline-flex items-center gap-2 px-8 py-4 text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
           >
-            Our Philosophy
+            See how it works
           </a>
         </div>
       </div>
