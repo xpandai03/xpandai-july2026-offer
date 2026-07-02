@@ -34,7 +34,7 @@ export function Philosophy() {
             }`}
           >
             <img
-              src="/minimalist-japanese-interior-design-with-natural-w.jpg"
+              src="/calm-workspace.jpg"
               alt="A calm, uncluttered workspace"
               className="absolute inset-0 w-full h-full object-cover"
             />
