@@ -5,27 +5,23 @@ import { useEffect, useRef, useState } from "react"
 const steps = [
   {
     number: "01",
-    title: "Listen",
-    description:
-      "We begin with presence. Understanding not just your space, but how you inhabit it—your rhythms, your needs, your aspirations.",
+    title: "Map",
+    week: "Week 1",
+    description: "We shadow your funnel and map every tool, form, and workflow you run today.",
   },
   {
     number: "02",
-    title: "Envision",
+    title: "Build",
+    week: "Weeks 2–3",
     description:
-      "Together we explore possibilities. Mood boards, material samples, and spatial concepts emerge from our collaborative dialogue.",
+      "Your branded platform goes up alongside what's already working — nothing breaks, nothing pauses.",
   },
   {
     number: "03",
-    title: "Craft",
+    title: "Own",
+    week: "Week 4",
     description:
-      "With intention and care, we bring the vision to life. Every detail considered, every element purposeful.",
-  },
-  {
-    number: "04",
-    title: "Dwell",
-    description:
-      "The space is complete, but the journey continues. We ensure your environment supports your evolving life.",
+      "Cutover, training, and a system your team actually understands. Yours from day one.",
   },
 ]
 
@@ -69,16 +65,16 @@ export function Process() {
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                A journey of
-                <span className="italic"> intention</span>
+                Live in
+                <span className="italic"> four weeks</span>
               </h2>
               <p
                 className={`text-muted-foreground leading-relaxed transition-all duration-1000 delay-300 ${
                   isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
                 }`}
               >
-                Great spaces are not rushed. They unfold through a considered process that respects both the
-                architecture and the humans who will inhabit it.
+                Three steps, one month, no disruption. We map what you run, build alongside it, and hand you a system
+                your team owns from day one.
               </p>
             </div>
           </div>
@@ -99,6 +95,7 @@ export function Process() {
                       {step.number}
                     </span>
                     <div>
+                      <p className="text-xs tracking-widest uppercase text-terracotta mb-2">{step.week}</p>
                       <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">{step.title}</h3>
                       <p className="text-muted-foreground leading-relaxed max-w-xl">{step.description}</p>
                     </div>
