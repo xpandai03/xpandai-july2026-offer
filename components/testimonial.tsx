@@ -35,14 +35,14 @@ export function Testimonial() {
           </svg>
         </div>
 
-        {/* Quote */}
+        {/* Pull-quote */}
         <blockquote
           className={`font-serif text-2xl md:text-3xl lg:text-4xl font-light text-primary-foreground leading-relaxed mb-10 text-balance transition-all duration-1000 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Working with Stillpoint felt like a meditation. They understood that our home needed to support our
-          family&apos;s wellbeing, not just look beautiful. The result is a space that finally feels like us.
+          Your best prospects should never wait behind your worst leads. One platform decides who books first — and
+          nothing slips through in between.
         </blockquote>
 
         {/* Attribution */}
@@ -51,8 +51,7 @@ export function Testimonial() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <p className="text-sm tracking-widest uppercase text-primary-foreground/80">Mari & Henrik Lindqvist</p>
-          <p className="text-sm text-primary-foreground/60 mt-1">Copenhagen Residence</p>
+          <p className="text-sm tracking-widest uppercase text-primary-foreground/80">The Xpand AI Principle</p>
         </div>
       </div>
     </section>
