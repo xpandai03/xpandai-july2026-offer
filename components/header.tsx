@@ -36,6 +36,12 @@ export function Header() {
               Process
             </Link>
             <Link
+              href="/demos"
+              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
+            >
+              About
+            </Link>
+            <Link
               href="/#contact"
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
@@ -86,6 +92,13 @@ export function Header() {
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
             >
               Process
+            </Link>
+            <Link
+              href="/demos"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+            >
+              About
             </Link>
             <Link
               href="/#contact"
