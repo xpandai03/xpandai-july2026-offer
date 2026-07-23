@@ -50,7 +50,7 @@ export function Contact() {
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              20 minutes. We&apos;ll walk your current stack and show you exactly what one platform would replace.
+              30 minutes. We&apos;ll walk your current stack and show you exactly what one platform would replace.
             </p>
 
             {/* Contact Info */}
@@ -72,8 +72,7 @@ export function Contact() {
             </div>
           </div>
 
-          {/* Right Column - Booking CTA */}
-          {/* #book-call — calendar embed lands here later */}
+          {/* Right Column - Booking CTA. Opens the booking page in a new tab. */}
           <div
             id="book-call"
             className={`scroll-mt-32 transition-all duration-1000 delay-500 ${
@@ -81,7 +80,7 @@ export function Contact() {
             }`}
           >
             <div className="border border-border bg-card p-10 lg:p-14">
-              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">Book a 20-minute call</h3>
+              <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">{BOOKING_LABEL}</h3>
               <p className="text-muted-foreground leading-relaxed mb-10">
                 Pick a time and we&apos;ll take it from there. No prep, no deck — just your funnel and a screen share.
               </p>
