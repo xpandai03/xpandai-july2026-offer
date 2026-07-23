@@ -23,7 +23,7 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Operations Platform for Advisory Firms
+          Operations Platform for Regulated Appointment Businesses
         </p>
 
         {/* Main Headline */}
