@@ -43,7 +43,7 @@ export function ProductProof() {
     const next = !isMuted
     video.muted = next
     if (!next) {
-      // Unmuting is a user gesture — make sure playback continues.
+      // Unmuting is a user gesture. Make sure playback continues.
       const play = video.play()
       if (play) play.catch(() => {})
     }
@@ -113,7 +113,7 @@ export function ProductProof() {
             </div>
           </div>
 
-          {/* Product proof film — autoplays muted on loop; visitor can unmute */}
+          {/* Product proof film: autoplays muted on loop; visitor can unmute */}
           <div
             className={`relative aspect-video bg-stone/30 overflow-hidden lg:order-first transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"

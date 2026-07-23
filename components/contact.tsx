@@ -81,7 +81,7 @@ export function Contact() {
             <div className="border border-border bg-card p-10 lg:p-14">
               <h3 className="font-serif text-2xl md:text-3xl text-foreground mb-4">{BOOKING_LABEL}</h3>
               <p className="text-muted-foreground leading-relaxed mb-10">
-                Pick a time and we&apos;ll take it from there. No prep, no deck — just your funnel and a screen share.
+                Pick a time and we&apos;ll take it from there. No prep, no deck, just your funnel and a screen share.
               </p>
               <BookCallLink
                 location="contact"

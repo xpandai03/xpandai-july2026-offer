@@ -14,7 +14,7 @@ const steps = [
     title: "Build",
     week: "Weeks 2–3",
     description:
-      "Your branded platform goes up alongside what's already working — nothing breaks, nothing pauses.",
+      "Your branded platform goes up alongside what's already working. Nothing breaks, nothing pauses.",
   },
   {
     number: "03",
