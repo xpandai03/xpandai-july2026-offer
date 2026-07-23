@@ -147,11 +147,11 @@ export function Philosophy() {
               </div>
               <div>
                 <p className="font-serif text-3xl md:text-4xl text-sage">20+</p>
-                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Automations, one client</p>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Firms transformed in 2026</p>
               </div>
               <div>
-                <p className="font-serif text-3xl md:text-4xl text-sage">2</p>
-                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Years, longest partnership</p>
+                <p className="font-serif text-3xl md:text-4xl text-sage">$60K</p>
+                <p className="text-xs tracking-widest uppercase text-muted-foreground mt-2">Avg. first-year software savings</p>
               </div>
             </div>
           </div>
