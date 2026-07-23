@@ -6,7 +6,7 @@ const services = [
   {
     title: "Intake & Scoring",
     description:
-      "Branded forms that qualify every prospect on submission — your 10s route to the front of the line.",
+      "Branded forms that qualify every prospect on submission. Your 10s route to the front of the line.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
         <path
@@ -34,7 +34,7 @@ const services = [
   {
     title: "One Dashboard",
     description:
-      "Every lead, every source, every booking — live in one place. No more doing the math by hand.",
+      "Every lead, every source, every booking: live in one place. No more doing the math by hand.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
         <path
@@ -48,7 +48,7 @@ const services = [
   {
     title: "Automated Back Office",
     description:
-      "Reports, exports, and follow-ups that used to take hours of manual editing — handled.",
+      "Reports, exports, and follow-ups that used to take hours of manual editing. Handled.",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
         <path

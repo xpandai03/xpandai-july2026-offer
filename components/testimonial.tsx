@@ -41,8 +41,9 @@ export function Testimonial() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          Your best prospects should never wait behind your worst leads. One platform decides who books first — and
-          nothing slips through in between.
+          The systems that run your business shouldn&apos;t be rented from five software companies and held together by
+          tribal knowledge. They should be one system you own, improve, and compound. That&apos;s how a service firm
+          becomes AI-native, and how operations become enterprise value.
         </blockquote>
 
         {/* Attribution */}

@@ -23,7 +23,7 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Operations Platform for Advisory Firms
+          Operations Platform for Regulated Appointment Businesses
         </p>
 
         {/* Main Headline */}
@@ -42,8 +42,8 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          One branded system that runs your intake, scoring, scheduling, and CRM — so your best prospects book fast and
-          nothing leaks through the cracks.
+          One branded system that runs your intake, scoring, scheduling, and CRM. Built for businesses where trust and
+          compliance decide who wins. Your best prospects book fast, and nothing leaks through the cracks.
         </p>
 
         {/* CTA */}

@@ -16,21 +16,21 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Xpand AI | Operations Platform for Advisory Firms",
+  title: "Xpand AI | Operations Platform for Regulated Appointment Businesses",
   description:
-    "One branded system that runs your intake, scoring, scheduling, and CRM — so your best prospects book fast and nothing leaks through the cracks.",
+    "One branded system that runs your intake, scoring, scheduling, and CRM. Your best prospects book fast and nothing leaks through the cracks.",
   openGraph: {
-    title: "Xpand AI | Operations Platform for Advisory Firms",
+    title: "Xpand AI | Operations Platform for Regulated Appointment Businesses",
     description:
-      "One branded system that runs your intake, scoring, scheduling, and CRM — so your best prospects book fast and nothing leaks through the cracks.",
+      "One branded system that runs your intake, scoring, scheduling, and CRM. Your best prospects book fast and nothing leaks through the cracks.",
     siteName: "Xpand AI",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Xpand AI | Operations Platform for Advisory Firms",
+    title: "Xpand AI | Operations Platform for Regulated Appointment Businesses",
     description:
-      "One branded system that runs your intake, scoring, scheduling, and CRM — so your best prospects book fast and nothing leaks through the cracks.",
+      "One branded system that runs your intake, scoring, scheduling, and CRM. Your best prospects book fast and nothing leaks through the cracks.",
   },
 }
 
