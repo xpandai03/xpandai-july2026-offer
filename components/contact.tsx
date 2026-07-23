@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 
+import { BOOKING_LABEL, BookCallLink } from "@/components/book-call-link"
+
 export function Contact() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
@@ -83,11 +85,11 @@ export function Contact() {
               <p className="text-muted-foreground leading-relaxed mb-10">
                 Pick a time and we&apos;ll take it from there. No prep, no deck — just your funnel and a screen share.
               </p>
-              <a
-                href="#book-call"
+              <BookCallLink
+                location="contact"
                 className="group inline-flex items-center gap-3 px-8 py-4 bg-sage text-primary-foreground text-sm tracking-widest uppercase hover:bg-sage/90 transition-all duration-500"
               >
-                Book a 20-minute call
+                {BOOKING_LABEL}
                 <svg
                   className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
                   fill="none"
@@ -96,7 +98,7 @@ export function Contact() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </BookCallLink>
             </div>
           </div>
         </div>

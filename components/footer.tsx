@@ -1,3 +1,5 @@
+import { BOOKING_LABEL, BookCallLink } from "@/components/book-call-link"
+
 export function Footer() {
   return (
     <footer className="py-16 px-6 lg:px-12 border-t border-border">
@@ -34,9 +36,9 @@ export function Footer() {
           <div className="md:col-span-2">
             <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">Connect</p>
             <nav className="flex flex-col gap-3">
-              <a href="#book-call" className="text-sm text-foreground hover:text-sage transition-colors">
-                Book a call
-              </a>
+              <BookCallLink location="footer" className="text-sm text-foreground hover:text-sage transition-colors">
+                {BOOKING_LABEL}
+              </BookCallLink>
               <a href="#" className="text-sm text-foreground hover:text-sage transition-colors">
                 LinkedIn
               </a>
