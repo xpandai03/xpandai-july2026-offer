@@ -74,8 +74,7 @@ export function Contact() {
 
           {/* Right Column - Booking CTA. Opens the booking page in a new tab. */}
           <div
-            id="book-call"
-            className={`scroll-mt-32 transition-all duration-1000 delay-500 ${
+            className={`transition-all duration-1000 delay-500 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
