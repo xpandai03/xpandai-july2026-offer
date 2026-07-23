@@ -96,8 +96,6 @@ export function Philosophy() {
               )}
             </button>
 
-            {/* Overlay accent */}
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-terracotta/80" />
           </div>
 
           {/* Content */}

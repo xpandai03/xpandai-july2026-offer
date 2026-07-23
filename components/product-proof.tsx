@@ -134,8 +134,6 @@ export function ProductProof() {
               )}
             </button>
 
-            {/* Overlay accent */}
-            <div className="absolute bottom-0 right-0 w-24 h-24 bg-terracotta/80" />
           </div>
         </div>
       </div>
