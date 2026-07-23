@@ -17,16 +17,16 @@ export function Footer() {
           <div className="md:col-span-2 md:col-start-7">
             <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">Navigate</p>
             <nav className="flex flex-col gap-3">
-              <a href="#approach" className="text-sm text-foreground hover:text-sage transition-colors">
+              <a href="/#approach" className="text-sm text-foreground hover:text-sage transition-colors">
                 Approach
               </a>
-              <a href="#platform" className="text-sm text-foreground hover:text-sage transition-colors">
+              <a href="/#platform" className="text-sm text-foreground hover:text-sage transition-colors">
                 Platform
               </a>
-              <a href="#process" className="text-sm text-foreground hover:text-sage transition-colors">
+              <a href="/#process" className="text-sm text-foreground hover:text-sage transition-colors">
                 Process
               </a>
-              <a href="#contact" className="text-sm text-foreground hover:text-sage transition-colors">
+              <a href="/#contact" className="text-sm text-foreground hover:text-sage transition-colors">
                 Contact
               </a>
             </nav>
