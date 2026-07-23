@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react"
 
+import Link from "next/link"
+
 export function ProductProof() {
   const [isVisible, setIsVisible] = useState(false)
   const [isMuted, setIsMuted] = useState(true)
@@ -87,6 +89,27 @@ export function ProductProof() {
                 <em className="text-foreground">Today:</em> every lead scored on arrival, top prospects booked first,
                 reporting in one click.
               </p>
+            </div>
+
+            <div
+              className={`mt-10 transition-all duration-1000 delay-700 ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
+            >
+              <Link
+                href="/demos"
+                className="group inline-flex items-center gap-2 text-sm tracking-widest uppercase text-sage hover:text-foreground transition-colors duration-500"
+              >
+                See the work
+                <svg
+                  className="w-4 h-4 transition-transform duration-500 group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
             </div>
           </div>
 

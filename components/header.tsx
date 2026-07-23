@@ -18,25 +18,25 @@ export function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
             <Link
-              href="#approach"
+              href="/#approach"
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
               Approach
             </Link>
             <Link
-              href="#platform"
+              href="/#platform"
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
               Platform
             </Link>
             <Link
-              href="#process"
+              href="/#process"
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
               Process
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
               Contact
@@ -67,28 +67,28 @@ export function Header() {
         >
           <div className="flex flex-col gap-6 pt-4">
             <Link
-              href="#approach"
+              href="/#approach"
               onClick={() => setIsMenuOpen(false)}
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
             >
               Approach
             </Link>
             <Link
-              href="#platform"
+              href="/#platform"
               onClick={() => setIsMenuOpen(false)}
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
             >
               Platform
             </Link>
             <Link
-              href="#process"
+              href="/#process"
               onClick={() => setIsMenuOpen(false)}
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
             >
               Process
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               onClick={() => setIsMenuOpen(false)}
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
             >
