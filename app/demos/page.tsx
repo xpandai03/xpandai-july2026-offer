@@ -18,6 +18,13 @@ export const metadata: Metadata = {
     siteName: "Xpand AI",
     type: "website",
   },
+  // Declared so this page does not inherit the root layout's Twitter description.
+  twitter: {
+    card: "summary_large_image",
+    title: "Demos | Xpand AI",
+    description:
+      "Walkthroughs of intake, scheduling, and CRM systems built and shipped for real clients, plus the person who builds them.",
+  },
 }
 
 export default function DemosPage() {
