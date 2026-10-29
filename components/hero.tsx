@@ -24,17 +24,17 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          Operations Platform for Regulated Appointment Businesses
+          For financial advisors and clinics
         </p>
 
-        {/* Main Headline */}
+        {/* Main Headline. Sized down from the template so the two sentences fit a phone screen. */}
         <h1
-          className={`font-serif text-5xl md:text-7xl lg:text-8xl font-light leading-[1.1] tracking-tight text-foreground mb-8 text-balance transition-all duration-1000 delay-500 ${
+          className={`font-serif text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight text-foreground mb-8 text-balance transition-all duration-1000 delay-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          All your data.
-          <span className="block text-sage">Finally at your fingertips.</span>
+          Your marketing brings the leads.
+          <span className="block text-sage">We make sure they get followed up, booked and measured.</span>
         </h1>
 
         {/* Subheadline */}
@@ -43,8 +43,8 @@ export function Hero() {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          One branded system that runs your intake, scoring, scheduling, and CRM. Built for businesses where trust and
-          compliance decide who wins. Your best prospects book fast, and nothing leaks through the cracks.
+          One system for intake, follow-up, scheduling and reporting, built on the tools you already use. Live in 3 to 4
+          weeks.
         </p>
 
         {/* CTA */}
@@ -71,11 +71,13 @@ export function Hero() {
             See how it works
           </DemoVideoButton>
         </div>
-      </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2">
-        <div className="w-px h-16 bg-gradient-to-b from-transparent via-stone to-transparent animate-pulse" />
+        {/* Scroll indicator. In flow below the CTAs so it can never cross them; hidden on phones, where the
+            stacked buttons already sit near the fold. */}
+        <div
+          aria-hidden="true"
+          className="hidden md:block mx-auto mt-16 w-px h-16 bg-gradient-to-b from-transparent via-stone to-transparent animate-pulse"
+        />
       </div>
     </section>
   )

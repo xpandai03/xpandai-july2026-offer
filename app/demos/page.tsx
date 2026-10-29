@@ -6,24 +6,28 @@ import { DemoTestimonials } from "@/components/demo-testimonials"
 import { FounderBlock } from "@/components/founder-block"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { SOCIAL_IMAGE } from "@/lib/site"
 
 export const metadata: Metadata = {
-  title: "Demos | Xpand AI",
+  title: "Work | Xpand AI",
+  alternates: { canonical: "/demos" },
   description:
     "Walkthroughs of intake, scheduling, and CRM systems built and shipped for real clients, plus the person who builds them.",
   openGraph: {
-    title: "Demos | Xpand AI",
+    title: "Work | Xpand AI",
     description:
       "Walkthroughs of intake, scheduling, and CRM systems built and shipped for real clients, plus the person who builds them.",
     siteName: "Xpand AI",
     type: "website",
+    images: [SOCIAL_IMAGE],
   },
   // Declared so this page does not inherit the root layout's Twitter description.
   twitter: {
     card: "summary_large_image",
-    title: "Demos | Xpand AI",
+    title: "Work | Xpand AI",
     description:
       "Walkthroughs of intake, scheduling, and CRM systems built and shipped for real clients, plus the person who builds them.",
+    images: [SOCIAL_IMAGE],
   },
 }
 

@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from "react"
 
 import Link from "next/link"
 
+import { InViewVideo } from "@/components/in-view-video"
+
 export function ProductProof() {
   const [isVisible, setIsVisible] = useState(false)
-  const [isMuted, setIsMuted] = useState(true)
   const sectionRef = useRef<HTMLElement>(null)
-  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,31 +27,14 @@ export function ProductProof() {
     return () => observer.disconnect()
   }, [])
 
-  // Ensure the muted property is set on the DOM node so autoplay is allowed,
-  // then kick off playback (some browsers ignore the JSX `muted` attribute).
-  useEffect(() => {
-    const video = videoRef.current
-    if (!video) return
-    video.muted = true
-    const play = video.play()
-    if (play) play.catch(() => {})
-  }, [])
-
-  const toggleMute = () => {
-    const video = videoRef.current
-    if (!video) return
-    const next = !isMuted
-    video.muted = next
-    if (!next) {
-      // Unmuting is a user gesture. Make sure playback continues.
-      const play = video.play()
-      if (play) play.catch(() => {})
-    }
-    setIsMuted(next)
-  }
-
   return (
-    <section ref={sectionRef} id="product-proof" className="py-32 lg:py-40 px-6 lg:px-12 bg-sand/50">
+    // overflow-x-clip: the film starts 2rem to the right before its reveal, which widened the page on phones.
+    // clip (not hidden) keeps this from becoming a scroll container.
+    <section
+      ref={sectionRef}
+      id="product-proof"
+      className="py-32 lg:py-40 px-6 lg:px-12 bg-sand/50 overflow-x-clip"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Content */}
@@ -113,50 +96,18 @@ export function ProductProof() {
             </div>
           </div>
 
-          {/* Product proof film: autoplays muted on loop; visitor can unmute */}
+          {/* Product proof film: plays in view on desktop, tap to play on phones */}
           <div
             className={`relative aspect-video bg-stone/30 overflow-hidden lg:order-first transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
             }`}
           >
-            <video
-              ref={videoRef}
-              className="absolute inset-0 w-full h-full object-cover"
+            <InViewVideo
               src="/xpand-proof-film-v2.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="metadata"
-              aria-label="Xpand AI product proof film"
+              poster="/posters/xpand-proof-film.jpg"
+              label="Xpand AI product proof film"
+              controlsSide="left"
             />
-
-            {/* Mute / unmute toggle */}
-            <button
-              type="button"
-              onClick={toggleMute}
-              aria-label={isMuted ? "Unmute video" : "Mute video"}
-              className="absolute bottom-4 left-4 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-background/80 text-foreground backdrop-blur-sm hover:bg-background transition-colors duration-300"
-            >
-              {isMuted ? (
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 9.75L19.5 12m0 0l2.25 2.25M19.5 12l2.25-2.25M19.5 12l-2.25 2.25M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"
-                  />
-                </svg>
-              ) : (
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"
-                  />
-                </svg>
-              )}
-            </button>
-
           </div>
         </div>
       </div>

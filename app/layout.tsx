@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { DM_Sans, Cormorant_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+
+import { SITE_URL } from "@/lib/site"
 import "./globals.css"
 
 const dmSans = DM_Sans({
@@ -16,21 +18,22 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: "Xpand AI | Operations Platform for Regulated Appointment Businesses",
+  metadataBase: new URL(SITE_URL),
+  title: "Xpand AI | Lead Follow-Up and Booking for Advisors and Clinics",
   description:
-    "One branded system that runs your intake, scoring, scheduling, and CRM. Your best prospects book fast and nothing leaks through the cracks.",
+    "Your marketing brings the leads. We make sure they get followed up, booked and measured. Built for financial advisors and clinics.",
   openGraph: {
-    title: "Xpand AI | Operations Platform for Regulated Appointment Businesses",
+    title: "Xpand AI | Lead Follow-Up and Booking for Advisors and Clinics",
     description:
-      "One branded system that runs your intake, scoring, scheduling, and CRM. Your best prospects book fast and nothing leaks through the cracks.",
+      "Your marketing brings the leads. We make sure they get followed up, booked and measured. Built for financial advisors and clinics.",
     siteName: "Xpand AI",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Xpand AI | Operations Platform for Regulated Appointment Businesses",
+    title: "Xpand AI | Lead Follow-Up and Booking for Advisors and Clinics",
     description:
-      "One branded system that runs your intake, scoring, scheduling, and CRM. Your best prospects book fast and nothing leaks through the cracks.",
+      "Your marketing brings the leads. We make sure they get followed up, booked and measured. Built for financial advisors and clinics.",
   },
 }
 
