@@ -1,4 +1,5 @@
 import { BOOKING_LABEL, BookCallLink } from "@/components/book-call-link"
+import { LINKEDIN_URL } from "@/lib/site"
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
           <div className="md:col-span-4">
             <p className="font-serif text-2xl tracking-wide text-foreground mb-4">Xpand AI</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              One branded operations platform for wealth-advisory firms.
+              Lead follow-up and booking systems for financial advisors and clinics.
             </p>
           </div>
 
@@ -39,9 +40,16 @@ export function Footer() {
               <BookCallLink location="footer" className="text-sm text-foreground hover:text-sage transition-colors">
                 {BOOKING_LABEL}
               </BookCallLink>
-              <a href="#" className="text-sm text-foreground hover:text-sage transition-colors">
-                LinkedIn
-              </a>
+              {LINKEDIN_URL && (
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-foreground hover:text-sage transition-colors"
+                >
+                  LinkedIn
+                </a>
+              )}
             </nav>
           </div>
 
@@ -49,10 +57,10 @@ export function Footer() {
           <div className="md:col-span-2">
             <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">Legal</p>
             <nav className="flex flex-col gap-3">
-              <a href="#" className="text-sm text-foreground hover:text-sage transition-colors">
+              <a href="/privacy" className="text-sm text-foreground hover:text-sage transition-colors">
                 Privacy
               </a>
-              <a href="#" className="text-sm text-foreground hover:text-sage transition-colors">
+              <a href="/terms" className="text-sm text-foreground hover:text-sage transition-colors">
                 Terms
               </a>
             </nav>

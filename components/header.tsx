@@ -39,7 +39,7 @@ export function Header() {
               href="/demos"
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
             >
-              About
+              Work
             </Link>
             <Link
               href="/#contact"
@@ -98,7 +98,7 @@ export function Header() {
               onClick={() => setIsMenuOpen(false)}
               className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
             >
-              About
+              Work
             </Link>
             <Link
               href="/#contact"

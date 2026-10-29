@@ -51,13 +51,12 @@ export function DemoGrid() {
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            Walkthroughs of real products. Intake, scheduling, and CRM work first, then the rest of the range. Each one
-            opens in a new tab.
+            Walkthroughs of real products: intake, scheduling and CRM. Each one opens in a new tab.
           </p>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-border">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-border">
           {demos.map((demo, index) => (
             <a
               key={demo.id}
