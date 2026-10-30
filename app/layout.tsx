@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next"
 import { DM_Sans, Cormorant_Garamond } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 
+import { UtmCapture } from "@/components/utm-capture"
 import { SITE_URL } from "@/lib/site"
 import "./globals.css"
 
@@ -49,6 +50,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${cormorant.variable} font-sans antialiased`}>
+        <UtmCapture />
         {children}
         <Analytics />
       </body>
