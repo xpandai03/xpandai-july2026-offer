@@ -57,8 +57,9 @@ export default function PrivacyPage() {
           <strong>Email.</strong> If you email us, we keep your message and contact details so we can reply.
         </p>
         <p>
-          <strong>Videos and links.</strong> Some demo videos are hosted by Loom or Google Drive. When you play or open
-          one, that service may collect information under its own privacy policy.
+          <strong>Videos and links.</strong> Some demo videos are hosted by Loom or Google Drive. Videos on our home
+          page are hosted by Tella. When you play or open one, that service may collect information under its own
+          privacy policy.
         </p>
       </LegalSection>
 

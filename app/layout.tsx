@@ -20,26 +20,26 @@ const cormorant = Cormorant_Garamond({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: "Xpand AI | Lead Follow-Up and Booking for Advisors and Clinics",
+  title: "Xpand AI | Webinar follow-up and booking for financial advisors",
   description:
-    "Your marketing brings the leads. We make sure they get followed up, booked and measured. Built for financial advisors and clinics.",
+    "Your best webinar leads booked first, and everyone else hears back. Start with a $1,500 pilot on your next webinar.",
   openGraph: {
-    title: "Xpand AI | Lead Follow-Up and Booking for Advisors and Clinics",
+    title: "Xpand AI | Webinar follow-up and booking for financial advisors",
     description:
-      "Your marketing brings the leads. We make sure they get followed up, booked and measured. Built for financial advisors and clinics.",
+      "Your best webinar leads booked first, and everyone else hears back. Start with a $1,500 pilot on your next webinar.",
     siteName: "Xpand AI",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Xpand AI | Lead Follow-Up and Booking for Advisors and Clinics",
+    title: "Xpand AI | Webinar follow-up and booking for financial advisors",
     description:
-      "Your marketing brings the leads. We make sure they get followed up, booked and measured. Built for financial advisors and clinics.",
+      "Your best webinar leads booked first, and everyone else hears back. Start with a $1,500 pilot on your next webinar.",
   },
 }
 
 export const viewport: Viewport = {
-  themeColor: "#f5f2ed",
+  themeColor: "#eef4fa",
 }
 
 export default function RootLayout({
