@@ -3,8 +3,39 @@
 import { useState } from "react"
 import Link from "next/link"
 
-export function Header() {
+import { OfferButton } from "@/components/offer-button"
+
+/** Section links for the clinic page, which holds the previous home page and its anchors. */
+const NAV_LINKS = [
+  { href: "/clinics#approach", label: "Approach" },
+  { href: "/clinics#platform", label: "Platform" },
+  { href: "/clinics#process", label: "Process" },
+  { href: "/demos", label: "Work" },
+  { href: "/clinics#contact", label: "Contact" },
+]
+
+type HeaderProps = {
+  /** When set, the header shows the logo and this one button, with no nav. Used on the offer page. */
+  cta?: { label: string; location: string }
+}
+
+export function Header({ cta }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  if (cta) {
+    return (
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-12">
+          <div className="flex h-16 md:h-20 items-center justify-between gap-3">
+            <Link href="/" className="shrink-0 font-serif text-xl md:text-2xl tracking-wide text-foreground">
+              XPAND AI
+            </Link>
+            <OfferButton label={cta.label} location={cta.location} size="sm" />
+          </div>
+        </nav>
+      </header>
+    )
+  }
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
@@ -17,36 +48,15 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
-            <Link
-              href="/#approach"
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
-            >
-              Approach
-            </Link>
-            <Link
-              href="/#platform"
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
-            >
-              Platform
-            </Link>
-            <Link
-              href="/#process"
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
-            >
-              Process
-            </Link>
-            <Link
-              href="/demos"
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
-            >
-              Work
-            </Link>
-            <Link
-              href="/#contact"
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
-            >
-              Contact
-            </Link>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors duration-500"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
@@ -72,41 +82,16 @@ export function Header() {
           className={`md:hidden overflow-hidden transition-all duration-500 ease-out ${isMenuOpen ? "max-h-64 pb-8" : "max-h-0"}`}
         >
           <div className="flex flex-col gap-6 pt-4">
-            <Link
-              href="/#approach"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Approach
-            </Link>
-            <Link
-              href="/#platform"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Platform
-            </Link>
-            <Link
-              href="/#process"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Process
-            </Link>
-            <Link
-              href="/demos"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Work
-            </Link>
-            <Link
-              href="/#contact"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Contact
-            </Link>
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-sm tracking-widest uppercase text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>

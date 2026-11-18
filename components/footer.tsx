@@ -1,5 +1,13 @@
-import { BOOKING_LABEL, BookCallLink } from "@/components/book-call-link"
+import Link from "next/link"
+
 import { LINKEDIN_URL } from "@/lib/site"
+
+const FOOTER_LINKS = [
+  { href: "/demos", label: "Work" },
+  { href: "/clinics", label: "Clinics" },
+  { href: "/privacy", label: "Privacy" },
+  { href: "/terms", label: "Terms" },
+]
 
 export function Footer() {
   return (
@@ -7,64 +15,31 @@ export function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-12 gap-12">
           {/* Logo & Tagline */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-5">
             <p className="font-serif text-2xl tracking-wide text-foreground mb-4">Xpand AI</p>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Lead follow-up and booking systems for financial advisors and clinics.
+              Webinar follow-up and booking for financial advisory firms.
             </p>
           </div>
 
-          {/* Navigation */}
-          <div className="md:col-span-2 md:col-start-7">
-            <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">Navigate</p>
-            <nav className="flex flex-col gap-3">
-              <a href="/#approach" className="text-sm text-foreground hover:text-sage transition-colors">
-                Approach
+          {/* Links */}
+          <nav aria-label="Footer" className="md:col-span-6 md:col-start-7 flex flex-wrap gap-x-8 gap-y-3 md:justify-end">
+            {FOOTER_LINKS.map((link) => (
+              <Link key={link.href} href={link.href} className="text-sm text-foreground hover:text-sage transition-colors">
+                {link.label}
+              </Link>
+            ))}
+            {LINKEDIN_URL && (
+              <a
+                href={LINKEDIN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-foreground hover:text-sage transition-colors"
+              >
+                LinkedIn
               </a>
-              <a href="/#platform" className="text-sm text-foreground hover:text-sage transition-colors">
-                Platform
-              </a>
-              <a href="/#process" className="text-sm text-foreground hover:text-sage transition-colors">
-                Process
-              </a>
-              <a href="/#contact" className="text-sm text-foreground hover:text-sage transition-colors">
-                Contact
-              </a>
-            </nav>
-          </div>
-
-          {/* Connect */}
-          <div className="md:col-span-2">
-            <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">Connect</p>
-            <nav className="flex flex-col gap-3">
-              <BookCallLink location="footer" className="text-sm text-foreground hover:text-sage transition-colors">
-                {BOOKING_LABEL}
-              </BookCallLink>
-              {LINKEDIN_URL && (
-                <a
-                  href={LINKEDIN_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-foreground hover:text-sage transition-colors"
-                >
-                  LinkedIn
-                </a>
-              )}
-            </nav>
-          </div>
-
-          {/* Legal */}
-          <div className="md:col-span-2">
-            <p className="text-xs tracking-widest uppercase text-muted-foreground mb-4">Legal</p>
-            <nav className="flex flex-col gap-3">
-              <a href="/privacy" className="text-sm text-foreground hover:text-sage transition-colors">
-                Privacy
-              </a>
-              <a href="/terms" className="text-sm text-foreground hover:text-sage transition-colors">
-                Terms
-              </a>
-            </nav>
-          </div>
+            )}
+          </nav>
         </div>
 
         {/* Bottom Bar */}

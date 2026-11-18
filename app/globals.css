@@ -3,48 +3,53 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Japandi color palette - warm naturals with muted accents */
+/*
+ * Blue palette sampled from the hero video. Source hex values:
+ * background #eef4fa, text #12152a, accent #4e60b8, card #fcfcfc,
+ * panel #ecf0f4, navy #283470. Muted text, border and stone are derived.
+ */
 :root {
-  --background: oklch(0.96 0.01 80);
-  --foreground: oklch(0.25 0.02 60);
-  --card: oklch(0.98 0.005 80);
-  --card-foreground: oklch(0.25 0.02 60);
-  --popover: oklch(0.98 0.005 80);
-  --popover-foreground: oklch(0.25 0.02 60);
-  --primary: oklch(0.35 0.06 150);
-  --primary-foreground: oklch(0.98 0.005 80);
-  --secondary: oklch(0.92 0.02 80);
-  --secondary-foreground: oklch(0.25 0.02 60);
-  --muted: oklch(0.9 0.02 80);
-  --muted-foreground: oklch(0.45 0.02 60);
-  --accent: oklch(0.65 0.12 45);
-  --accent-foreground: oklch(0.98 0.005 80);
+  --background: oklch(0.964 0.01 247.9);
+  --foreground: oklch(0.205 0.042 275.9);
+  --card: oklch(0.991 0 89.9);
+  --card-foreground: oklch(0.205 0.042 275.9);
+  --popover: oklch(0.991 0 89.9);
+  --popover-foreground: oklch(0.205 0.042 275.9);
+  --primary: oklch(0.52 0.139 272);
+  --primary-foreground: oklch(0.991 0 89.9);
+  --secondary: oklch(0.953 0.007 247.9);
+  --secondary-foreground: oklch(0.205 0.042 275.9);
+  --muted: oklch(0.953 0.007 247.9);
+  --muted-foreground: oklch(0.442 0.052 274.3);
+  --accent: oklch(0.52 0.139 272);
+  --accent-foreground: oklch(0.991 0 89.9);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: oklch(0.88 0.02 80);
-  --input: oklch(0.88 0.02 80);
-  --ring: oklch(0.35 0.06 150);
-  --chart-1: oklch(0.35 0.06 150);
-  --chart-2: oklch(0.65 0.12 45);
-  --chart-3: oklch(0.55 0.08 250);
-  --chart-4: oklch(0.7 0.1 120);
-  --chart-5: oklch(0.6 0.08 30);
+  --border: oklch(0.91 0.016 257.2);
+  --input: oklch(0.91 0.016 257.2);
+  --ring: oklch(0.52 0.139 272);
+  --chart-1: oklch(0.52 0.139 272);
+  --chart-2: oklch(0.35 0.104 271.5);
+  --chart-3: oklch(0.666 0.107 273.5);
+  --chart-4: oklch(0.742 0.032 269);
+  --chart-5: oklch(0.91 0.028 276.8);
   --radius: 0.25rem;
-  --sidebar: oklch(0.96 0.01 80);
-  --sidebar-foreground: oklch(0.25 0.02 60);
-  --sidebar-primary: oklch(0.35 0.06 150);
-  --sidebar-primary-foreground: oklch(0.98 0.005 80);
-  --sidebar-accent: oklch(0.92 0.02 80);
-  --sidebar-accent-foreground: oklch(0.25 0.02 60);
-  --sidebar-border: oklch(0.88 0.02 80);
-  --sidebar-ring: oklch(0.35 0.06 150);
+  --sidebar: oklch(0.964 0.01 247.9);
+  --sidebar-foreground: oklch(0.205 0.042 275.9);
+  --sidebar-primary: oklch(0.52 0.139 272);
+  --sidebar-primary-foreground: oklch(0.991 0 89.9);
+  --sidebar-accent: oklch(0.953 0.007 247.9);
+  --sidebar-accent-foreground: oklch(0.205 0.042 275.9);
+  --sidebar-border: oklch(0.91 0.016 257.2);
+  --sidebar-ring: oklch(0.52 0.139 272);
 
-  /* Custom Japandi tokens */
-  --sand: oklch(0.92 0.03 75);
-  --sage: oklch(0.35 0.06 150);
-  --terracotta: oklch(0.65 0.12 45);
-  --indigo: oklch(0.4 0.1 260);
-  --stone: oklch(0.7 0.02 80);
+  /* Custom tokens. Names are kept from the earlier palette; values are now blue. */
+  --sand: oklch(0.953 0.007 247.9);
+  --sage: oklch(0.52 0.139 272);
+  --terracotta: oklch(0.52 0.139 272);
+  --indigo: oklch(0.35 0.104 271.5);
+  --stone: oklch(0.742 0.032 269);
+  --glow: oklch(0.91 0.028 276.8);
 }
 
 .dark {
@@ -54,7 +59,7 @@
   --card-foreground: oklch(0.92 0.01 80);
   --popover: oklch(0.2 0.02 60);
   --popover-foreground: oklch(0.92 0.01 80);
-  --primary: oklch(0.55 0.08 150);
+  --primary: oklch(0.666 0.107 273.5);
   --primary-foreground: oklch(0.18 0.02 60);
   --secondary: oklch(0.25 0.02 60);
   --secondary-foreground: oklch(0.92 0.01 80);
@@ -66,23 +71,23 @@
   --destructive-foreground: oklch(0.637 0.237 25.331);
   --border: oklch(0.3 0.02 60);
   --input: oklch(0.3 0.02 60);
-  --ring: oklch(0.55 0.08 150);
-  --chart-1: oklch(0.55 0.08 150);
+  --ring: oklch(0.666 0.107 273.5);
+  --chart-1: oklch(0.666 0.107 273.5);
   --chart-2: oklch(0.55 0.1 45);
   --chart-3: oklch(0.5 0.08 250);
   --chart-4: oklch(0.6 0.08 120);
   --chart-5: oklch(0.55 0.08 30);
   --sidebar: oklch(0.2 0.02 60);
   --sidebar-foreground: oklch(0.92 0.01 80);
-  --sidebar-primary: oklch(0.55 0.08 150);
+  --sidebar-primary: oklch(0.666 0.107 273.5);
   --sidebar-primary-foreground: oklch(0.18 0.02 60);
   --sidebar-accent: oklch(0.25 0.02 60);
   --sidebar-accent-foreground: oklch(0.92 0.01 80);
   --sidebar-border: oklch(0.3 0.02 60);
-  --sidebar-ring: oklch(0.55 0.08 150);
+  --sidebar-ring: oklch(0.666 0.107 273.5);
 
   --sand: oklch(0.3 0.02 75);
-  --sage: oklch(0.55 0.08 150);
+  --sage: oklch(0.666 0.107 273.5);
   --terracotta: oklch(0.55 0.1 45);
   --indigo: oklch(0.5 0.1 260);
   --stone: oklch(0.4 0.02 80);
@@ -133,6 +138,7 @@
   --color-terracotta: var(--terracotta);
   --color-indigo: var(--indigo);
   --color-stone: var(--stone);
+  --color-glow: var(--glow);
 }
 
 @layer base {
