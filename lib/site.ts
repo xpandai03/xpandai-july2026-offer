@@ -28,5 +28,5 @@ export const SOCIAL_IMAGE = {
   url: "/opengraph-image.png",
   width: 1200,
   height: 630,
-  alt: "Xpand AI: Your marketing brings the leads. We make sure they get followed up, booked and measured.",
+  alt: "Xpand AI: You fill the room. We get your best prospects booked first.",
 }

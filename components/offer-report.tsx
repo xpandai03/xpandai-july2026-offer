@@ -68,7 +68,7 @@ export function OfferReport() {
                 {offerReport.leads.map((lead) => (
                   <tr key={lead.name} className="border-b border-border last:border-b-0">
                     <td className="py-3 pr-2 font-medium text-foreground">{lead.name}</td>
-                    <td className="py-3 pr-2 text-foreground">#{lead.rank}</td>
+                    <td className="py-3 pr-2 text-foreground">{lead.rank}</td>
                     <td className="py-3 pr-2 text-muted-foreground">{offerReport.status}</td>
                     <td className="py-3 text-primary">{offerReport.followUp}</td>
                   </tr>

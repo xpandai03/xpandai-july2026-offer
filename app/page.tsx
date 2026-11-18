@@ -8,7 +8,7 @@ import { OfferHowItWorks } from "@/components/offer-how-it-works"
 import { OfferProblem } from "@/components/offer-problem"
 import { OfferReport } from "@/components/offer-report"
 import { OfferSecurity } from "@/components/offer-security"
-import { OFFER_CTA_LABEL } from "@/lib/offer-data"
+import { OFFER_CTA_LABEL, OFFER_CTA_SHORT_LABEL } from "@/lib/offer-data"
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Header cta={{ label: OFFER_CTA_LABEL, location: "header" }} />
+      <Header cta={{ label: OFFER_CTA_LABEL, shortLabel: OFFER_CTA_SHORT_LABEL, location: "header" }} />
       <OfferHero />
       <OfferProblem />
       <OfferHowItWorks />

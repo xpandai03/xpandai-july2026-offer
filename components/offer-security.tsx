@@ -7,7 +7,7 @@ import { revealClass, revealDelay, useReveal } from "@/components/reveal"
 import { VideoEmbed } from "@/components/video-embed"
 import { SECURITY_VIDEO_EMBED_HTML, offerSecurity } from "@/lib/offer-data"
 
-/** Security and compliance on the navy band, then the security video. Claims come only from offer-data. */
+/** Security and compliance as one checklist card on the navy band, then the security video. Claims come only from offer-data. */
 export function OfferSecurity() {
   const { ref, isVisible } = useReveal<HTMLElement>()
 
@@ -20,13 +20,12 @@ export function OfferSecurity() {
           className={`text-3xl md:text-5xl text-center mb-12 ${revealClass(isVisible, "up-sm")}`}
         />
 
-        <ul className="grid gap-4 md:grid-cols-2">
-          {offerSecurity.points.map((point, index) => (
-            <li
-              key={point}
-              className={`flex items-start gap-3 rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 p-5 ${revealClass(isVisible)}`}
-              style={revealDelay(150 + index * 70)}
-            >
+        <ul
+          className={`mx-auto max-w-3xl divide-y divide-primary-foreground/15 rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 px-6 md:px-8 ${revealClass(isVisible)}`}
+          style={revealDelay(150)}
+        >
+          {offerSecurity.points.map((point) => (
+            <li key={point} className="flex items-start gap-3 py-4 md:py-5">
               <ShieldCheck aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-glow" />
               <span className="text-base font-light leading-relaxed tracking-[-0.01em]">{point}</span>
             </li>
