@@ -1,15 +1,15 @@
 /**
- * Copy for the home page: one offer for financial advisory firms that run webinars.
+ * Copy for the home page: one offer for financial advisory firms that run webinars or seminars.
  *
  * Headlines mark their italic serif words with *asterisks*; EmphasisHeading renders them.
  * The repo is public: the sample report below is made up. Never put real names or numbers here.
  */
 
 /** The one button label on the home page (header, hero and close). */
-export const OFFER_CTA_LABEL = "Start a pilot on your next webinar"
+export const OFFER_CTA_LABEL = "See it on your next event"
 
 /** The header button label below tablet width, where the full label does not fit beside the logo. */
-export const OFFER_CTA_SHORT_LABEL = "Start a pilot"
+export const OFFER_CTA_SHORT_LABEL = "See it live"
 
 /** Hero video, as Tella provides the embed, with the title overlay off (title=0). Rendered as HTML, unchanged. */
 export const HERO_VIDEO_EMBED_HTML =
@@ -23,10 +23,10 @@ export const SECURITY_VIDEO_EMBED_HTML =
   '<div style="position: relative; padding-bottom: 56.2500%; height: 0;"><iframe style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" src="https://www.tella.tv/video/vid_cmwlesizf00b708jh9vebbsml/embed?b=1&title=1&a=0&loop=0&t=0&muted=0&wt=0&o=1" allow="autoplay; fullscreen" allowtransparency></iframe></div>'
 
 export const offerHero = {
-  label: "For financial advisory firms that run webinars",
+  label: "For financial advisory firms that run webinars or seminars",
   headline: "You fill the room. *We get your best prospects booked first.*",
   sub: "Every attendee gets ranked, your top leads book with the right advisor, and everyone else hears back. Set up in a day on the tools you already use.",
-  note: "Starts with a 30-minute setup call. No long contract.",
+  note: "Starts with a 30-minute walkthrough. No long contract.",
 }
 
 export const offerProblem = {
@@ -42,7 +42,7 @@ export const offerProblem = {
 export const offerHowItWorks = {
   headline: "How it *works*",
   steps: [
-    "A short branded form goes out during and after your webinar. It takes about two minutes.",
+    "A short branded form goes out during and after your webinar or seminar. It takes about two minutes.",
     "Each attendee is ranked by your rules: assets, age, timing.",
     "Top-ranked leads book inside the form with the right advisor. You control which ranks can book themselves.",
     "Everyone hears back, using wording your compliance team approves once.",
@@ -86,5 +86,5 @@ export const offerSecurity = {
 
 export const offerClose = {
   headline: "Try it on *one webinar*",
-  sub: "Pick a time and we'll set up your pilot.",
+  sub: "Pick a time and we'll walk you through it.",
 }
