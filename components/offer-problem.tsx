@@ -24,7 +24,7 @@ export function OfferProblem() {
               style={revealDelay(150 + index * 100)}
             >
               <span aria-hidden="true" className="mb-5 block h-1 w-10 rounded-full bg-primary" />
-              <p className="text-lg leading-relaxed text-foreground">{item}</p>
+              <p className="text-lg font-light leading-relaxed tracking-[-0.01em] text-foreground">{item}</p>
             </li>
           ))}
         </ul>

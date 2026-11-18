@@ -28,7 +28,7 @@ export function OfferSecurity() {
               style={revealDelay(150 + index * 70)}
             >
               <ShieldCheck aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0 text-glow" />
-              <span className="text-base leading-relaxed">{point}</span>
+              <span className="text-base font-light leading-relaxed tracking-[-0.01em]">{point}</span>
             </li>
           ))}
         </ul>

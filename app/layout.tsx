@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Xpand AI | Webinar follow-up and booking for financial advisors",
   description:
-    "Your best webinar leads booked first, and everyone else hears back. Start with a $1,500 pilot on your next webinar.",
+    "Your best webinar leads booked first, and everyone else hears back. Start with a pilot on your next webinar.",
   openGraph: {
     title: "Xpand AI | Webinar follow-up and booking for financial advisors",
     description:
-      "Your best webinar leads booked first, and everyone else hears back. Start with a $1,500 pilot on your next webinar.",
+      "Your best webinar leads booked first, and everyone else hears back. Start with a pilot on your next webinar.",
     siteName: "Xpand AI",
     type: "website",
   },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Xpand AI | Webinar follow-up and booking for financial advisors",
     description:
-      "Your best webinar leads booked first, and everyone else hears back. Start with a $1,500 pilot on your next webinar.",
+      "Your best webinar leads booked first, and everyone else hears back. Start with a pilot on your next webinar.",
   },
 }
 

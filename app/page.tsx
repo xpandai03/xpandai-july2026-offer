@@ -5,7 +5,6 @@ import { Header } from "@/components/header"
 import { OfferClose } from "@/components/offer-close"
 import { OfferHero } from "@/components/offer-hero"
 import { OfferHowItWorks } from "@/components/offer-how-it-works"
-import { OfferPricing } from "@/components/offer-pricing"
 import { OfferProblem } from "@/components/offer-problem"
 import { OfferReport } from "@/components/offer-report"
 import { OfferSecurity } from "@/components/offer-security"
@@ -24,7 +23,6 @@ export default function Home() {
       <OfferProblem />
       <OfferHowItWorks />
       <OfferReport />
-      <OfferPricing />
       <OfferSecurity />
       <OfferClose />
       <Footer />
