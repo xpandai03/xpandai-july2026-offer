@@ -21,20 +21,19 @@ export const metadata: Metadata = {
 
 type Intro = { heading: string; sub: string; points?: string[] }
 
-/** Default intro, used by every track except the home page's pilot offer. */
+/** Default intro, used by every track except the home page. */
 const DEFAULT_INTRO: Intro = {
   heading: "Pick a time. 30 minutes.",
   sub: "We'll look at how your leads get followed up today and where they're slipping.",
 }
 
-/** Intro for visitors who came from the home page pilot button (track=home). */
-const PILOT_INTRO: Intro = {
-  heading: "Set up your pilot",
-  sub: "A 30-minute call. Bring your next webinar date.",
+/** Intro for visitors who came from the home page button (track=home). */
+const HOME_INTRO: Intro = {
+  heading: "See the system live",
+  sub: "A 30-minute walkthrough. Bring your next event date.",
   points: [
     "We confirm your scoring rules and calendars.",
     "Your form is live within a day.",
-    "You pay only when you say go.",
   ],
 }
 
@@ -44,7 +43,7 @@ type BookPageProps = {
 
 export default async function BookPage({ searchParams }: BookPageProps) {
   const { track } = await searchParams
-  const intro = track === "home" ? PILOT_INTRO : DEFAULT_INTRO
+  const intro = track === "home" ? HOME_INTRO : DEFAULT_INTRO
 
   return (
     <main className="min-h-screen">
