@@ -26,7 +26,7 @@ export const offerHero = {
   label: "For financial advisory firms that run webinars",
   headline: "You fill the room. *We get your best prospects booked first.*",
   sub: "Every attendee gets ranked, your top leads book with the right advisor, and everyone else hears back. Set up in a day on the tools you already use.",
-  note: "Starts with a 30-minute setup call. $1,500 for one webinar. No long contract.",
+  note: "Starts with a 30-minute setup call. No long contract.",
 }
 
 export const offerProblem = {
