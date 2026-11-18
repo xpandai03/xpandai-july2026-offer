@@ -16,7 +16,7 @@ const NAV_LINKS = [
 
 type HeaderProps = {
   /** When set, the header shows the logo and this one button, with no nav. Used on the offer page. */
-  cta?: { label: string; location: string }
+  cta?: { label: string; shortLabel?: string; location: string }
 }
 
 export function Header({ cta }: HeaderProps) {
@@ -30,7 +30,7 @@ export function Header({ cta }: HeaderProps) {
             <Link href="/" className="shrink-0 font-serif text-xl md:text-2xl tracking-wide text-foreground">
               XPAND AI
             </Link>
-            <OfferButton label={cta.label} location={cta.location} size="sm" />
+            <OfferButton label={cta.label} shortLabel={cta.shortLabel} location={cta.location} size="sm" />
           </div>
         </nav>
       </header>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
 
+import { Check } from "lucide-react"
+
 import { BookingEmbed } from "@/components/booking-embed"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
@@ -17,7 +19,33 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION, images: [SOCIAL_IMAGE] },
 }
 
-export default function BookPage() {
+type Intro = { heading: string; sub: string; points?: string[] }
+
+/** Default intro, used by every track except the home page's pilot offer. */
+const DEFAULT_INTRO: Intro = {
+  heading: "Pick a time. 30 minutes.",
+  sub: "We'll look at how your leads get followed up today and where they're slipping.",
+}
+
+/** Intro for visitors who came from the home page pilot button (track=home). */
+const PILOT_INTRO: Intro = {
+  heading: "Set up your pilot",
+  sub: "A 30-minute call. Bring your next webinar date.",
+  points: [
+    "We confirm your scoring rules and calendars.",
+    "Your form is live within a day.",
+    "You pay only when you say go.",
+  ],
+}
+
+type BookPageProps = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}
+
+export default async function BookPage({ searchParams }: BookPageProps) {
+  const { track } = await searchParams
+  const intro = track === "home" ? PILOT_INTRO : DEFAULT_INTRO
+
   return (
     <main className="min-h-screen">
       <Header />
@@ -26,11 +54,19 @@ export default function BookPage() {
         <div className="max-w-5xl mx-auto">
           <div className="max-w-2xl mb-12">
             <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-light leading-[1.1] text-foreground mb-6 text-balance">
-              Pick a time. 30 minutes.
+              {intro.heading}
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed text-pretty">
-              We&apos;ll look at how your leads get followed up today and where they&apos;re slipping.
-            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed text-pretty">{intro.sub}</p>
+            {intro.points && (
+              <ul className="mt-6 space-y-3">
+                {intro.points.map((point) => (
+                  <li key={point} className="flex items-start gap-3 text-foreground leading-relaxed">
+                    <Check aria-hidden="true" className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           <BookingEmbed />
