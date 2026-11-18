@@ -17,7 +17,7 @@ export function EmphasisHeading({
   const parts = text.split(/(\*[^*]+\*)/).filter(Boolean)
 
   return (
-    <Tag className={`font-sans font-bold tracking-tight text-balance ${className}`}>
+    <Tag className={`font-sans font-semibold tracking-[-0.035em] text-balance ${className}`}>
       {parts.map((part, index) =>
         part.startsWith("*") && part.endsWith("*") ? (
           // Cormorant sits small next to DM Sans at the same size, so the italic words are scaled up slightly.

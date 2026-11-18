@@ -23,7 +23,7 @@ export const offerHero = {
   label: "For financial advisory firms that run webinars",
   headline: "You fill the room. *We get your best prospects booked first.*",
   sub: "Every attendee gets ranked, your top leads book with the right advisor, and everyone else hears back. Set up in a day on the tools you already use.",
-  note: "$1,500 for one webinar. No long contract.",
+  note: "No long contract.",
 }
 
 export const offerProblem = {
@@ -66,37 +66,6 @@ export const offerReport = {
   status: "Not booked",
   followUp: "Follow-up sent",
   caption: "Sample report, example data.",
-}
-
-export type OfferPrice = {
-  name: string
-  price: string
-  cadence: string
-  points: string[]
-  promise?: string
-  featured?: boolean
-}
-
-export const offerPricing: { headline: string; prices: OfferPrice[]; note: string } = {
-  headline: "Two prices. *That's it.*",
-  prices: [
-    {
-      name: "Pilot",
-      price: "$1,500",
-      cadence: "once",
-      points: ["Set up in a day.", "Runs on your next webinar.", "Report the morning after."],
-      promise:
-        "every top-ranked lead is booked or followed up within 24 hours, or your next webinar is free.",
-      featured: true,
-    },
-    {
-      name: "The system",
-      price: "$2,500",
-      cadence: "a month",
-      points: ["Every webinar, follow-up, reports and upkeep.", "No setup fee, the pilot is the setup."],
-    },
-  ],
-  note: "Want leads pushed straight into your CRM? That is an optional add-on, quoted once.",
 }
 
 export const offerSecurity = {

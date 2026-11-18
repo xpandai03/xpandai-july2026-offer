@@ -29,7 +29,7 @@ export function OfferHowItWorks() {
               >
                 {index + 1}
               </span>
-              <p className="pt-1 text-base md:text-lg leading-relaxed text-foreground">{step}</p>
+              <p className="pt-1 text-base md:text-lg font-light leading-relaxed tracking-[-0.01em] text-foreground">{step}</p>
             </li>
           ))}
         </ol>
