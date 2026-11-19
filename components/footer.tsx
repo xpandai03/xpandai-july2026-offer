@@ -5,6 +5,7 @@ import { LINKEDIN_URL } from "@/lib/site"
 const FOOTER_LINKS = [
   { href: "/demos", label: "Work" },
   { href: "/clinics", label: "Clinics" },
+  { href: "/security", label: "Security" },
   { href: "/privacy", label: "Privacy" },
   { href: "/terms", label: "Terms" },
 ]
