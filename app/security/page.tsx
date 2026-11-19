@@ -93,7 +93,7 @@ export default function SecurityPage() {
   return (
     <LegalPage
       title="Security and Compliance for Advisory Firms"
-      updated="November 19, 2026"
+      updated="November 2026"
       cta={{ label: OFFER_CTA_LABEL, shortLabel: OFFER_CTA_SHORT_LABEL, location: "security_header" }}
     >
       <p>
