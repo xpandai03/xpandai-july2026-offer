@@ -1,3 +1,4 @@
+import type React from "react"
 import type { Metadata } from "next"
 
 import { LegalPage, LegalSection } from "@/components/legal-page"
@@ -22,21 +23,16 @@ type Service = { name: string; purpose: string; data: string }
  * Services that process data in the system. Every entry is checked against the
  * intake code and hosting config; keep it in step with the privacy policy.
  */
-const CORE_SERVICES: Service[] = [
+const STANDARD_SERVICES: Service[] = [
   {
     name: "Vercel",
-    purpose: "Hosts and runs the system.",
+    purpose: "Hosting. Hosted in the United States.",
     data: "All data the system handles, while it is being processed.",
   },
   {
     name: "Neon",
-    purpose: "Database.",
+    purpose: "Database. Hosted in the United States.",
     data: "All stored lead data.",
-  },
-  {
-    name: "Google Fonts",
-    purpose: "Delivers the typeface used on the intake form.",
-    data: "The visitor's IP address and browser details. No form answers.",
   },
 ]
 
@@ -47,7 +43,7 @@ const OPTIONAL_SERVICES: Service[] = [
     data: "Alert text, which can include a prospect's name and email address.",
   },
   {
-    name: "Salesforce",
+    name: "Your CRM, such as Salesforce",
     purpose: "Adds new leads and booked meetings to your CRM.",
     data: "Prospect contact details, form answers and meeting times.",
   },
@@ -57,8 +53,8 @@ const OPTIONAL_SERVICES: Service[] = [
     data: "Advisor calendar events. Booked meetings carry a reference code, not prospect details.",
   },
   {
-    name: "TimeTap",
-    purpose: "Scheduling, if your firm uses it.",
+    name: "Your scheduling tool",
+    purpose: "Scheduling.",
     data: "Prospect name, email, phone and appointment time.",
   },
   {
@@ -66,12 +62,11 @@ const OPTIONAL_SERVICES: Service[] = [
     purpose: "Creates a meeting link for each booked meeting.",
     data: "Meeting time and host. No prospect details.",
   },
-  {
-    name: "Meta",
-    purpose: "Measures ad conversions on an event registration page.",
-    data: "Email and phone in hashed (SHA-256) form, IP address, browser details and the page address.",
-  },
 ]
+
+function ServiceListHeading({ children }: { children: React.ReactNode }) {
+  return <h3 className="mt-8 mb-3 text-xs tracking-[0.3em] uppercase text-foreground">{children}</h3>
+}
 
 function ServiceList({ services }: { services: Service[] }) {
   return (
@@ -146,14 +141,15 @@ export default function SecurityPage() {
         </ul>
       </LegalSection>
 
-      <LegalSection title="Hosting and subprocessors">
-        <p>The system runs on Vercel, in its US East (Washington, D.C.) region.</p>
-        <p>These services are always used:</p>
-        <ServiceList services={CORE_SERVICES} />
-        <p className="!mt-8">
-          These services are used only if your firm asks us to turn them on. Most connect to accounts your firm already
-          has.
+      <LegalSection title="Hosting and service providers">
+        <p>
+          Every firm&apos;s setup is built around the tools it already uses, so the exact services vary. Below is our
+          standard setup. Before go-live, each firm receives a written list of every service used in its setup, and we
+          tell the firm before adding a new one.
         </p>
+        <ServiceListHeading>Standard setup</ServiceListHeading>
+        <ServiceList services={STANDARD_SERVICES} />
+        <ServiceListHeading>Only if your firm turns them on</ServiceListHeading>
         <ServiceList services={OPTIONAL_SERVICES} />
       </LegalSection>
 
