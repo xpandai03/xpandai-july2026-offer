@@ -13,6 +13,11 @@ export const BOOKING_EMBED_URL =
 /** Public contact address, used on the legal pages. */
 export const CONTACT_EMAIL = "raunek@xpandai.com"
 
+/** Legal entity details, used on the privacy and security pages. */
+export const COMPANY_LEGAL_NAME = "XPAND TECHNOLOGY LLC"
+export const COMPANY_ADDRESS = "3333 La Cienega Blvd, Los Angeles, CA 90016"
+export const CONTACT_PHONE = { display: "818-436-9821", href: "tel:+18184369821" }
+
 /**
  * Founder LinkedIn profile. The footer hides the link while this is null, so the
  * site never ships a dead `#` link.

@@ -8,13 +8,15 @@ type LegalPageProps = {
   /** Human readable date, for example "October 29, 2026". */
   updated: string
   children: React.ReactNode
+  /** Optional header button. When set, the header shows the logo and this button, with no nav. */
+  cta?: React.ComponentProps<typeof Header>["cta"]
 }
 
-/** Shared shell for the privacy and terms pages. Plain prose, no reveal animation. */
-export function LegalPage({ title, updated, children }: LegalPageProps) {
+/** Shared shell for the privacy, terms and security pages. Plain prose, no reveal animation. */
+export function LegalPage({ title, updated, children, cta }: LegalPageProps) {
   return (
     <main className="min-h-screen">
-      <Header />
+      <Header cta={cta} />
       <article className="pt-40 pb-24 lg:pt-48 lg:pb-32 px-6 lg:px-12">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-6">Last updated {updated}</p>

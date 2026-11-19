@@ -1,15 +1,16 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 import { LegalPage, LegalSection } from "@/components/legal-page"
-import { CONTACT_EMAIL, SOCIAL_IMAGE } from "@/lib/site"
+import { COMPANY_ADDRESS, COMPANY_LEGAL_NAME, CONTACT_EMAIL, CONTACT_PHONE, SOCIAL_IMAGE } from "@/lib/site"
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Xpand AI",
-  description: "How Xpand Technology LLC collects, uses and protects information on xpandai.com.",
+  description: "How XPAND TECHNOLOGY LLC collects, uses and protects information on xpandai.com.",
   alternates: { canonical: "/privacy" },
   openGraph: {
     title: "Privacy Policy | Xpand AI",
-    description: "How Xpand Technology LLC collects, uses and protects information on xpandai.com.",
+    description: "How XPAND TECHNOLOGY LLC collects, uses and protects information on xpandai.com.",
     siteName: "Xpand AI",
     type: "website",
     images: [SOCIAL_IMAGE],
@@ -17,19 +18,20 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | Xpand AI",
-    description: "How Xpand Technology LLC collects, uses and protects information on xpandai.com.",
+    description: "How XPAND TECHNOLOGY LLC collects, uses and protects information on xpandai.com.",
     images: [SOCIAL_IMAGE],
   },
 }
 
 export default function PrivacyPage() {
   return (
-    <LegalPage title="Privacy Policy" updated="October 29, 2026">
+    <LegalPage title="Privacy Policy" updated="November 19, 2026">
       <p>
-        Xpand Technology LLC (&ldquo;Xpand&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) builds lead follow-up and
+        {COMPANY_LEGAL_NAME} (&ldquo;Xpand&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) builds lead follow-up and
         booking systems for financial advisors and clinics. This policy explains what information we collect when you
-        visit xpandai.com or book a call with us, how we use it, and the choices you have. It covers this website
-        only. Work we do for clients is governed by our written agreements with them.
+        visit xpandai.com or book a call with us, how we use it, and the choices you have. Section 4 explains how we
+        handle data we process for advisory firm clients. Work we do for clients is governed by our written agreements
+        with them.
       </p>
 
       <LegalSection title="1. Information we collect">
@@ -78,12 +80,31 @@ export default function PrivacyPage() {
       <LegalSection title="3. Who we share it with">
         <p>
           We share information only with service providers that help us run the site and our business: Vercel
-          (hosting and analytics), Google (Calendar, Meet and Workspace email) and Loom (video hosting). We may also
+          (hosting and analytics), Google (Calendar, Meet and Workspace email), and Loom, Tella and Google Drive (video
+          hosting). We may also
           disclose information if the law requires it, or to protect our rights or the safety of others.
         </p>
       </LegalSection>
 
-      <LegalSection title="4. How long we keep it">
+      <LegalSection title="4. Data we process for advisory firm clients">
+        <p>
+          When an advisory firm uses our lead intake and follow-up system, we process prospect information on the
+          firm&apos;s behalf, under our written agreement with that firm. This is what prospects enter on the
+          firm&apos;s intake form and the meetings they book. The firm owns and controls this data. We use it only to
+          provide our service to that firm. We do not sell it, and we never use it to train AI models.
+        </p>
+        <p>
+          Each firm&apos;s data is kept in its own separate database. We export it on request, and delete it on
+          request and at the end of the engagement. If you are a prospect of one of these firms, please contact the
+          firm about your information, and we will help it respond.
+        </p>
+        <p>
+          Our <Link href="/security">Security and Compliance</Link> page explains how this data is protected, which
+          services process it, and how it is exported and deleted.
+        </p>
+      </LegalSection>
+
+      <LegalSection title="5. How long we keep it">
         <p>
           We keep booking details and email correspondence for as long as we need them to work with you, and longer
           only where the law requires. Analytics data is kept in aggregate form within Vercel&apos;s standard retention
@@ -91,7 +112,7 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="5. Your choices and rights">
+      <LegalSection title="6. Your choices and rights">
         <p>
           You can ask us to access, correct or delete the personal information we hold about you by emailing{" "}
           <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>. If you are a California resident, you have the
@@ -101,30 +122,32 @@ export default function PrivacyPage() {
         </p>
       </LegalSection>
 
-      <LegalSection title="6. Security">
+      <LegalSection title="7. Security">
         <p>
           We use reasonable safeguards to protect the information we hold. No method of transmission or storage is
-          completely secure, so we cannot guarantee absolute security.
+          completely secure, so we cannot guarantee absolute security. Our{" "}
+          <Link href="/security">Security and Compliance</Link> page describes the safeguards for advisory firm data.
         </p>
       </LegalSection>
 
-      <LegalSection title="7. Children">
+      <LegalSection title="8. Children">
         <p>
           This site is meant for businesses and is not directed to children under 16. We do not knowingly collect
           personal information from children.
         </p>
       </LegalSection>
 
-      <LegalSection title="8. Changes to this policy">
+      <LegalSection title="9. Changes to this policy">
         <p>
           We may update this policy from time to time. The date at the top of this page shows when it last changed.
         </p>
       </LegalSection>
 
-      <LegalSection title="9. Contact">
+      <LegalSection title="10. Contact">
         <p>
-          Xpand Technology LLC, Los Angeles, CA. Email{" "}
-          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> with any question about this policy.
+          {COMPANY_LEGAL_NAME}, {COMPANY_ADDRESS}. Email{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> or call{" "}
+          <a href={CONTACT_PHONE.href}>{CONTACT_PHONE.display}</a> with any question about this policy.
         </p>
       </LegalSection>
     </LegalPage>
